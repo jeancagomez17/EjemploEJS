@@ -1,3 +1,4 @@
+
 class Ejemplo{
     constructor(){}
 
@@ -7,8 +8,8 @@ class Ejemplo{
             
                 <h1>hola mundo</h1>
             </div>
-
         `
+
         return dom.innerHTML += $template
     }
 }
