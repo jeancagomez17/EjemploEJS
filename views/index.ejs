@@ -4,6 +4,23 @@
     <input type="hidden" id="name" value="<%= titulo %>">
 </div>
 
+<table>
+<tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Profesion</td>
+</tr>
+
+<% for(i=0; i < personas.length; i++) { %>
+    <tr>
+        <td><%= personas[i].id %></td>
+        <td><%=personas[i].name %></td>
+        <td><%=personas[i].profesion %></td>
+    </tr>
+<% } %>
+
+</table>
+
 <script type="text/javascript" src="/components/card/main.js"></script>
 
 <%- include('template/footer.ejs') %>

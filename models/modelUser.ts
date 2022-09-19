@@ -6,12 +6,26 @@ interface IUser {
     profesion:string
 }
 
-class ModelUser{
+export class ModelUser{
+
     get getAllUser():Array<IUser>{
         return data as Array<IUser>;
     }
+
+     getUserById(id:number):Array<IUser>{
+        const newarray = data.filter((element) => {
+            if (id == element.id)
+                return element.id;
+        })
+        return newarray as Array<IUser>
+    }
+
+    
+
+
+
+
 }
 
-const model = new ModelUser()
-console.log(model.getAllUser);
+
 
