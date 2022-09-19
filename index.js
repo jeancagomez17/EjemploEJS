@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const app =  express();
 const ejs = require('ejs');
+// const modelo = require('./models/modelUser.ts')
+
 
 
 //Settings
@@ -25,11 +27,9 @@ app.use(express.urlencoded({ extends:false}))//
 
 //Routes 
 app.get('/', (req, res) => {
-    res.render("index", {titulo: "Jeancito"})
+    res.render("index", {titulo: "Mishell"})
 })
-// app.use(require('./routes/index'))
-// app.use(require('./routes/notes'))
-// app.use(require('./routes/users'))
+
 //Server Listen
 app.listen(app.get('port'), () =>{
     console.log(`Server listening on ${app.get('port')}`);
