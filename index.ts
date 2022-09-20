@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, './public')))
 //Middlewares
 
 app.get('/', (req:Request, res:Response)=>{ 
-    res.render('index', {titulo:'Ejemplo', personas:Users.getUsers})
+    res.render('index', {titulo:'Ejemplo', personas:Users.getUsers()})
 
 })
 app.listen(port, () => {

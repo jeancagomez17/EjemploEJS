@@ -2,16 +2,22 @@ import { ModelUser, IUser } from "../models/modelUser";
 
 export class UserController extends ModelUser {
 
-   get getUsers(){
+    getUsers(){
         const datos = super.getAllUser;
-        const validate = datos.filter((element =>{
-            if(element.hasOwnProperty("imagen")){
-                return true
+        const users:Array<IUser> = []
+        
+        datos.forEach((element =>{
+            if(Object.entries(element).length == 4){
+                console.log('Exito')
+                users.push(element)
             }
+            
+           
         }))
-        return validate
-
-
+        return users as Array<IUser>
+        
     }
 
 }   
+const app = new UserController();
+app.getUsers()

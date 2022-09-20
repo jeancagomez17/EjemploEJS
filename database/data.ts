@@ -5,5 +5,6 @@ export const data = [
     {id: 4, name:'Felipe', profesion:"Coordinador", imagen:"https://cdn.pixabay.com/photo/2018/08/28/13/29/avatar-3637561_960_720.png"},
     {id: 5, name:'Andres Vargas', profesion:"Only Fans Senior", imagen:"https://cdn.pixabay.com/photo/2016/03/31/20/27/avatar-1295773_960_720.png"},
     {id:6, name:"Prueba 1", profesion:"Va"},
+    {name:"Prueba2", imagen:"Hola"}
     
 ];
