@@ -1,10 +1,10 @@
 import  express, {Express, Request, Response}  from 'express';
-import {ModelUser} from './models/modelUser'
+import {UserController} from './controller/userController'
 import path from 'path';
 
 const app = express();
 const port = 3000;
-const Model = new ModelUser()
+const Users = new UserController()
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, './public')))
 //Middlewares
 
 app.get('/', (req:Request, res:Response)=>{ 
-    res.render('index', {titulo:'Ejemplo', personas:Model.getAllUser})
+    res.render('index', {titulo:'Ejemplo', personas:Users.getUsers})
 
 })
 app.listen(port, () => {

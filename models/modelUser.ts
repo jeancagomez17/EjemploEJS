@@ -1,9 +1,10 @@
 import {data }from '../database/data'
 
-interface IUser {
+export interface IUser {
     id:number,
     name:string,
-    profesion:string
+    profesion:string,
+    imagen?:string
 }
 
 export class ModelUser{
