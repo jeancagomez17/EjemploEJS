@@ -6,16 +6,15 @@ const app = express();
 const port = 3000;
 const Model = new ModelUser()
 
-app.set('view engine', 'ejs')
-app.set('views', __dirname + '/views')
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
 //directorio
 app.use(express.static(path.join(__dirname, './public')))
 //Middlewares
 
 app.get('/', (req:Request, res:Response)=>{ 
-    console.log('Probando...')
-    res.render('index', {titulo:'Mundo', personas:Model.getAllUser})
+    res.render('index', {titulo:'Ejemplo', personas:Model.getAllUser})
 
 })
 app.listen(port, () => {

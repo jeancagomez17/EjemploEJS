@@ -4,29 +4,12 @@
     <input type="hidden" id="name" value="<%= titulo %>">
 </div>
 
-<table>
-<tr>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Profesion</td>
-</tr>
-
-<% for(i=0; i < personas.length; i++)  {%>
-    <tr>
-        <td><%= personas[i].id %></td>
-        <td><%=personas[i].name %></td>
-        <td><%=personas[i].profesion %></td>
-    </tr>
-<% } %>
-
-</table>
 <div class="container">
-
 
 <% for(i=0; i < personas.length; i++)  {%>
     <div class="card">
-        <img src="/img/img_avatar.png" alt="Avatar" style="width:100%">
-        <div class="container" data-id=<%= personas[i].id %>>
+        <img src="<%= personas[i].imagen %>" alt="Avatar">
+        <div class="container" data-id="<%= personas[i].id %>">
             <h4><b><%= personas[i].name %></b></h4>
             <p><%= personas[i].profesion%></p>
 
