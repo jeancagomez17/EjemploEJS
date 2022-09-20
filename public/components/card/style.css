@@ -1,18 +1,23 @@
-.container {
-  padding: 2px 16px;
-  
+.container{
+  padding: 40px;
 }
 .card {
-  display: inline-block;
-    width: 400px;
+    display: inline-block;
+    width: 290px;
+    height:400px ;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     padding: 20px;
+    margin: 10px;
   }
   .card img{
     width:100%; 
-    height:400px;
+    height:70%;
+    
+  }
+  .texto {
+    padding: 2px 16px;
     
   }
   /* On mouse-over, add a deeper shadow */
