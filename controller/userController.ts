@@ -8,7 +8,6 @@ export class UserController extends ModelUser {
         
         datos.forEach((element =>{
             if(Object.entries(element).length == 4){
-                console.log('Exito')
                 users.push(element)
             }
             
